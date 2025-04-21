@@ -3,8 +3,10 @@ from tkinter import messagebox, simpledialog, ttk # Sirve para importar componen
 from PIL import Image, ImageTk# Se importa la biblioteca PIL para trabajar con imágenes 
 from excepciones import mostrar_info,mostrar_error,mostrar_advertencia # Esta línea importa el módulo excepciones y sus funciones
 from productos import Tienda # Se importa la clase Tienda del módulo productos para gestionar la tienda
+
 class InterfazTienda: # Esta clase representa la interfaz gráfica de la tienda
     def __init__(self, root): # Se define el constructor de la clase, para inicializar la ventana principal        self.root = root
+        self.root = root # Se asigna la ventana principal a la variable root
         self.root.title("Menú Principal - Tienda")
         self.root.geometry("800x700")
         self.fondo_img = ImageTk.PhotoImage(Image.open("python-supermarket.jpg").resize((800, 700))) # Se carga la imagen de fondo para una mejor apariencia
